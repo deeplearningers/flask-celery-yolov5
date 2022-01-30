@@ -16,7 +16,7 @@ from torch.multiprocessing import set_start_method
 from mythread import DataThread,PredictThread
 import queue
 import sys
-sys.path.append('/home/zhao/.fence/')
+sys.path.append('/home/')
 
 app = Flask(__name__)
 app.config.from_object(settings)
@@ -39,7 +39,7 @@ celery = make_celery(app)
 CONFIG = {
     "weights": "weights/yolov5m.pt",
     "device": "cuda:1",
-    "output": "/home/ipss/output",
+    "output": "/home/output",
     "imgsize": 640,
     "conf_thres": 0.6,
     "iou_thres": 0.7,
